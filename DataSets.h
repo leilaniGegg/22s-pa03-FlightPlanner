@@ -14,11 +14,20 @@ private:
     /**
      * DATASET SIZES
      */
-    static const int DATA_SIZE1 = 50;
-    static const int DATA_SIZE2 = 500;
-    static const int DATA_SIZE3 = 5000;
-    static const int DATA_SIZE4 = 50000;
-    static const int DATA_SIZE5 = 500000;
+    static const int DATA_SIZE1 = 10;
+    static const int DATA_SIZE2 = 100;
+    static const int DATA_SIZE3 = 1000;
+    static const int DATA_SIZE4 = 10000;
+    static const int DATA_SIZE5 = 100000;
+
+    /**
+     * GENERATE THE DATASETS
+     */
+    void generateSorted(int[], int);
+    void generateReverse(int[], int);
+    void generateRandom(int[], int);
+
+public:
 
     /**
      * SORTED DATASETS
@@ -46,18 +55,18 @@ private:
     int* randomData3 = new int[DATA_SIZE3];
     int* randomData4 = new int[DATA_SIZE4];
     int* randomData5 = new int[DATA_SIZE5];
-
-    void generateSorted(int[], int);
-    void generateReverse(int[], int);
-    void generateRandom(int[], int);
-
-public:
     DataSets();
     ~DataSets();
     //no need really for copy assignment operator?
     void printSortedData4();
     void printReverseData4();
     void printRandomData4();
+    int getDATA_SIZE1()const;
+    int getDATA_SIZE2()const;
+    int getDATA_SIZE3()const;
+    int getDATA_SIZE4()const;
+    int getDATA_SIZE5()const;
+
 
 };
 #endif //PA03_TEMPLATE_DATASETS_H

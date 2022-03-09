@@ -71,3 +71,19 @@ void DataSets::printRandomData4(){
     for (int i = 0; i < DATA_SIZE3; i++)
         std::cout << randomData3[i] << std::endl;
 }
+
+int DataSets::getDATA_SIZE1()const{
+    return DATA_SIZE1;
+}
+int DataSets::getDATA_SIZE2()const{
+    return DATA_SIZE2;
+}
+int DataSets::getDATA_SIZE3()const{
+    return DATA_SIZE3;
+}
+int DataSets::getDATA_SIZE4()const{
+    return DATA_SIZE4;
+}
+int DataSets::getDATA_SIZE5()const{
+    return DATA_SIZE5;
+}
