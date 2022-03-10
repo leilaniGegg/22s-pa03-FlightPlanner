@@ -23,7 +23,7 @@ protected:
     /**
      * DATASET SIZES
      */
-    const int DATA_SIZES[numSizes] = {10, 100, 1000, 10000, 100000};
+    const int DATA_SIZES[numSizes] = {100, 1000, 10000, 100000, 1000000};
 
     /**
      * SORTED DATASETS
@@ -41,12 +41,9 @@ protected:
     int** randomData = new int*[5];
 
 public:
-
-
     DataSets();
     ~DataSets();
     //no need really for copy assignment operator?
-
 
 };
 #endif //PA03_TEMPLATE_DATASETS_H

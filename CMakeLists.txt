@@ -3,7 +3,7 @@ project(PA03_template)
 set(CMAKE_CXX_STANDARD 14)
 
 # Create the executable for sorting
-add_executable(PA03_sorting_mystery main.cpp DataSets.cpp DataSets.h Mystery01Analysis.cpp Mystery01Analysis.h)
+add_executable(PA03_sorting_mystery main.cpp DataSets.cpp DataSets.h Mystery01Analysis.cpp Mystery01Analysis.h Mystery02Analysis.cpp Mystery02Analysis.h Mystery03Analysis.cpp Mystery03Analysis.h Mystery04Analysis.cpp Mystery04Analysis.h Mystery05Analysis.cpp Mystery05Analysis.h)
 
 message("Platform: " $ENV{PLATFORM})
 if($ENV{PLATFORM} STREQUAL "wsl2")

@@ -1,18 +1,16 @@
 //
-// Created by leila on 3/9/2022.
+// Created by leila on 3/10/2022.
 //
 
-#ifndef PA03_TEMPLATE_MYSTERY01ANALYSIS_H
-#define PA03_TEMPLATE_MYSTERY01ANALYSIS_H
+#ifndef PA03_TEMPLATE_MYSTERY02ANALYSIS_H
+#define PA03_TEMPLATE_MYSTERY02ANALYSIS_H
 
-#include <iostream>
-#include <fstream>
 #include <chrono>
-#include "DataSets.h"
 #include <map>
+#include "DataSets.h"
 #include "include/sorting_library.h"
 
-class Mystery01Analysis: public DataSets{
+class Mystery02Analysis: public DataSets{
 private:
     DataSets data;
     std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
@@ -27,7 +25,5 @@ public:
     void printSortedDataTimes();      //testing only
     void printReverseDataTimes();
     void printRandomDataTimes();
-    void exportTimes();
-    void writeToFile(std::ofstream output, std::map<int, double>);
 };
-#endif //PA03_TEMPLATE_MYSTERY01ANALYSIS_H
+#endif //PA03_TEMPLATE_MYSTERY02ANALYSIS_H
