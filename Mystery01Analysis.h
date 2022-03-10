@@ -7,22 +7,22 @@
 
 #include <chrono>
 #include "DataSets.h"
+#include <map>
 
-class Mystery01Analysis{
+class Mystery01Analysis: public DataSets{
 private:
     DataSets data;
     std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
-
+    std::map<int,double> sortedDataTimes;
+    std::map<int,double> reverseDataTimes;
+    std::map<int,double> randomDataTimes;
 
 public:
     void calculateTimesForSorted();
-    /**
-     * start = std::chrono::high_resolution_clock::now();
-       mystery01(data, DATA_SIZE);
-       end = std::chrono::high_resolution_clock::now();
-     */
     void calculateTimesForReverse();
     void calculateTimesForRandom();
-
+    void printSortedDataTimes();      //testing only
+    void printReverseDataTimes();
+    void printRandomDataTimes();
 };
 #endif //PA03_TEMPLATE_MYSTERY01ANALYSIS_H

@@ -2,12 +2,21 @@
 #include <chrono>
 #include "include/sorting_library.h"
 #include "DataSets.h"
+#include "Mystery01Analysis.h"
 
 
 int main() {
 
+    Mystery01Analysis m1A;
+    m1A.calculateTimesForSorted();
+    m1A.calculateTimesForReverse();
+    m1A.calculateTimesForRandom();
+    m1A.printSortedDataTimes();
+    m1A.printReverseDataTimes();
+    m1A.printRandomDataTimes();
+
     //make some data to sort
-    const int DATA_SIZE = 5000;
+    /*const int DATA_SIZE = 5000;
     int* data = new int[DATA_SIZE];
     for (int i = 0; i < DATA_SIZE; i++)
         data[i] = i;
@@ -59,6 +68,6 @@ int main() {
     end = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<double> time_in_seconds5 = end - start;
-    std::cout << std::fixed << "Mystery05 Duration: " << time_in_seconds5.count() << std::endl;
+    std::cout << std::fixed << "Mystery05 Duration: " << time_in_seconds5.count() << std::endl;*/
     return 0;
 }
