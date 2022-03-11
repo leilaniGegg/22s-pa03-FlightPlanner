@@ -7,6 +7,7 @@
 
 #include <chrono>
 #include <map>
+#include <fstream>
 #include "DataSets.h"
 #include "include/sorting_library.h"
 
@@ -25,5 +26,7 @@ public:
     void printSortedDataTimes();      //testing only
     void printReverseDataTimes();
     void printRandomDataTimes();
+    void exportTimes();
+    void writeToFile(const std::string&, std::map<int, double>);
 };
 #endif //PA03_TEMPLATE_MYSTERY02ANALYSIS_H

@@ -69,3 +69,31 @@ void Mystery02Analysis::printRandomDataTimes(){
         std::cout << itr->first << " elements - " << itr->second << " seconds" << std::endl;
     }
 }
+
+void Mystery02Analysis::exportTimes(){
+    std::string outputSorted = "times/mystery02/sortedDataTimes.csv";
+    std::string outputReverse = "times/mystery02/reverseDataTimes.csv";
+    std::string outputRandom = "times/mystery02/randomDataTimes.csv";
+    writeToFile(outputSorted, sortedDataTimes);
+    writeToFile(outputReverse, reverseDataTimes);
+    writeToFile(outputRandom, randomDataTimes);
+
+}
+
+void Mystery02Analysis::writeToFile(const std::string& filename, std::map<int, double> times){
+    std::ofstream output;
+    output.open(filename);
+    if(!output.is_open()){
+        std::cout << "Failed to open file" << std::endl;
+    }
+    else {
+        std::map<int, double>::iterator itr;
+        for (itr = times.begin(); itr != times.end(); itr++) {
+            output << std::fixed << std::showpoint;
+            output.precision(9);
+            //num elements, time
+            output << itr->first << "," << itr->second << std::endl;
+        }
+        output.close();
+    }
+}

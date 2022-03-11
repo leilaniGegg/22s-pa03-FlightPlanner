@@ -28,6 +28,6 @@ public:
     void printReverseDataTimes();
     void printRandomDataTimes();
     void exportTimes();
-    void writeToFile(std::ofstream output, std::map<int, double>);
+    void writeToFile(const std::string&, std::map<int, double>);
 };
 #endif //PA03_TEMPLATE_MYSTERY01ANALYSIS_H

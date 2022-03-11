@@ -4,6 +4,9 @@
 
 #ifndef PA03_TEMPLATE_MYSTERY03ANALYSIS_H
 #define PA03_TEMPLATE_MYSTERY03ANALYSIS_H
+
+#include <iostream>
+#include <fstream>
 #include <chrono>
 #include "DataSets.h"
 #include <map>
@@ -24,5 +27,7 @@ public:
     void printSortedDataTimes();      //testing only
     void printReverseDataTimes();
     void printRandomDataTimes();
+    void exportTimes();
+    void writeToFile(const std::string&, std::map<int, double>);
 };
 #endif //PA03_TEMPLATE_MYSTERY03ANALYSIS_H
