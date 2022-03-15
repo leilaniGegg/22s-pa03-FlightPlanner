@@ -9,7 +9,6 @@
 #include "Mystery05Analysis.h"
 
 int main() {
-
     Mystery01Analysis m1A;
     m1A.calculateTimesForSorted();
     m1A.calculateTimesForReverse();

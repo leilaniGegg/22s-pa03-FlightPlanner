@@ -87,6 +87,7 @@ void Mystery03Analysis::writeToFile(const std::string& filename, std::map<int, d
     }
     else {
         std::map<int, double>::iterator itr;
+        output << "DataSize, Time(s)" << std::endl;
         for (itr = times.begin(); itr != times.end(); itr++) {
             output << std::fixed << std::showpoint;
             output.precision(9);

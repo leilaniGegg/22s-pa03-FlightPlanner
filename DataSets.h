@@ -38,7 +38,7 @@ protected:
     /**
      * RANDOM DATASETS
      */
-    int** randomData = new int*[5];
+    int** randomData = new int*[numSizes];
 
 public:
     DataSets();

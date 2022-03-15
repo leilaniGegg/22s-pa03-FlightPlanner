@@ -22,7 +22,7 @@ DataSets::DataSets(){
         reverseData[i] = new int[DATA_SIZES[i]];
     }
     for(int i = 0; i < numSizes; i++){
-        generateSorted(reverseData[i], DATA_SIZES[i]);
+        generateReverse(reverseData[i], DATA_SIZES[i]);
     }
 
     /**
@@ -32,7 +32,7 @@ DataSets::DataSets(){
         randomData[i] = new int[DATA_SIZES[i]];
     }
     for(int i = 0; i < numSizes; i++){
-        generateSorted(randomData[i], DATA_SIZES[i]);
+        generateRandom(randomData[i], DATA_SIZES[i]);
     }
 
 }

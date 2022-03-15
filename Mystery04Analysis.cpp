@@ -28,7 +28,7 @@ void Mystery04Analysis::calculateTimesForReverse(){
 }
 
 void Mystery04Analysis::calculateTimesForRandom(){
-    for(int i = 0; i < numSizes-1; i++) {
+    for(int i = 0; i < numSizes; i++) {
         start = std::chrono::high_resolution_clock::now();
         mystery04(randomData[i], DATA_SIZES[i]);
         end = std::chrono::high_resolution_clock::now();
@@ -87,6 +87,7 @@ void Mystery04Analysis::writeToFile(const std::string& filename, std::map<int, d
     }
     else {
         std::map<int, double>::iterator itr;
+        output << "DataSize, Time(s)" << std::endl;
         for (itr = times.begin(); itr != times.end(); itr++) {
             output << std::fixed << std::showpoint;
             output.precision(9);
